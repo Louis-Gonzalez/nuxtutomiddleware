@@ -13,8 +13,12 @@
 </template>
 
 <script setup lang="ts"> 
-
-
+    const user = useCookie('user')
+    // inline middleware
+    definePageMeta({ 
+        middleware: [] 
+    })
+    
 </script>
 
 <style scoped></style>
