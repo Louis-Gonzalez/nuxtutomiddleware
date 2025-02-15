@@ -1,7 +1,9 @@
 <template>
-    <div v-for="route in routeList" :key="route.path">      
-        <NuxtLink :to="route.path">{{ route.name }}</NuxtLink>
-    </div>
+    <nav>
+        <div v-for="route in routeList" :key="route.path">      
+            <NuxtLink :to="route.path">{{ route.name }}</NuxtLink>
+        </div>
+    </nav>
 </template>
 
 <script setup lang="ts">
@@ -14,12 +16,18 @@
         {
         name: 'Admin',
         path: '/admin'
-    }]
+        },
+        {
+        name: 'Login',
+        path: '/login'
+        },
+        {
+        name: 'Logout',
+        path: '/logout'
+        }
+]
 </script>
 
 <style scoped>
-    header {
-        display: flex;
-        justify-content: space-between;
-    }
+
 </style>
